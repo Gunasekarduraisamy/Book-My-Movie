@@ -1,0 +1,94 @@
+/* .example-card{
+    width: 235px;
+    height: 350px;
+    max-height: fit-content;
+    margin-top: 9px;
+   background-color: rgba(155, 68, 68, 0.616); 
+    display: flexbox;
+    border-radius: 10px;
+    
+    transition: 1s;
+  
+  } */
+  
+  .example-card {
+    width: 300px;
+    margin-top: 55px;
+   
+    margin-left: 120px;
+    background-color: #080808; 
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px 1px  #1b03f4c5;
+    overflow: hidden;
+   
+    
+  }
+  
+  .example-card img {
+    width: 300px;
+    height: 350px; 
+    object-fit: cover;
+   
+  }
+   .movie-card .mat-card-actions {
+    display: flex;
+    justify-content: center; 
+    padding: 10px;
+  }
+  
+  .dashboard{
+    display: flex;
+  }
+  /* .example-card:hover{
+  transform:scale(1.2);
+  z-index: 2;
+  
+  } */
+
+  #image{
+    
+    width: 240px;
+    height: 200px;
+    background: #f403a4;
+    color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 5px #1b03f4c5,
+                0 0 15px #1b03f4c5,
+                0 0 50px #1b03f4c5;
+  }
+
+  #header {
+    display: flex;
+    height:80px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    width: 100%;
+  }
+  button:hover {
+    background-color: aqua; /* Change the background color on hover */
+  }
+  
+  #header > nav > mat-icon {
+    cursor: pointer;
+    padding: 20px;
+  }
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .body{
+    background-color: black;
+    
+  }
+
+  .signup{
+    
+      padding-right: 10px;
+      padding-left: 20px;
+      
+  }
+
+  /* *{
+    display:flow-root;
+  } */

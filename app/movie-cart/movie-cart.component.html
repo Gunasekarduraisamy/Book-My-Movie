@@ -1,0 +1,63 @@
+<mat-toolbar color="primary" id="header">
+
+  <img src="../../assets/images/Screenshot 2024-01-25 080707.png" style="width: 200px;height: 50px;">
+   
+  
+  
+<nav class = "icon">
+<button mat-raised-button  matTooltip="Home" routerLink="/">
+  <mat-icon >home</mat-icon>
+</button>
+
+</nav>
+
+
+ </mat-toolbar>
+ <body>
+  
+ 
+ <section id="cake-content">
+    <div id="cake-details">
+        <h1 style="font-weight: bold;">{{movie?.movieName}}</h1>
+        <img class = "image1" src="../../assets/images/{{movie?.movieName}}.jpg">
+        <h3 style="font-weight: bold;"> {{movie?.movieLanguage}}</h3>
+        <h2 style="font-weight: bold;">Theater: {{movie?.theaterName}} || Place: {{movie.theaterCity}}</h2>
+         
+    </div>
+    <hr>
+    <hr>
+    <form id="cake-request" #customerForm="ngForm">
+        <h2>Enter The Booking Details:</h2>
+
+        <mat-form-field appearance="fill">
+            <mat-label>Seat Type</mat-label>
+            <mat-select [(ngModel)]="movies.seatType" name ="seat">
+              <mat-option *ngFor="let seatType of SeatType" [value]="seatType">
+                {{ seatType.name }} - Rs {{ seatType.price }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+         <br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Number of Tickets</mat-label>
+            <input matInput type="number" required placeholder="quantity" name="quantity" #quantity="ngModel"
+              [(ngModel)]="movies.quantity" min="1" id = "quantity">
+            <mat-error *ngIf="quantity.errors?.['required']">Quantity cannot be zero</mat-error>
+            <mat-error *ngIf="quantity.errors?.['min']">Quantity cannot be zero or negative number</mat-error>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="fill">
+            <mat-label>Total Bill Amount</mat-label>
+            <input matInput type="number" id="totalBillAmount" name="totalBillAmount"  [value]="calculateBillAmount()" readonly>
+            <mat-error *ngIf="quantity.errors?.['pattern']">
+              Quantity cannot be zero or negative number
+            </mat-error>
+          </mat-form-field>
+          <br>
+          <button mat-flat-button color="accent"  (click)="bookTicket()">Book Tickets</button>
+
+    </form>
+ </section>
+ </body>
+    

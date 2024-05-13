@@ -1,0 +1,29 @@
+mat-hint{
+    color: red;
+}
+
+div {
+    margin: 20px;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  button {
+    margin-top: 15px;
+  }
+
+  
+

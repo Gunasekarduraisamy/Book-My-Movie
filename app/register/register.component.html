@@ -1,0 +1,76 @@
+<div class = "body">
+    <mat-toolbar color="primary" id="header">
+       
+          
+            
+      <img src="../../assets/images/Screenshot 2024-01-25 080707.png" style="width: 200px;height: 50px;">
+        
+      <nav class = "icon1">
+        <button mat-raised-button  matTooltip="Home" routerLink="/">
+          <mat-icon >home</mat-icon> 
+        </button>
+      </nav>
+      <hr>
+      <nav class="icon">
+        <button mat-raised-button matTooltip="Signin"  routerLink="/signin">
+          <mat-icon >login</mat-icon>
+        </button>
+      </nav>
+    </mat-toolbar>
+  <body>
+    
+<div class="page" >
+    <h2>REGISTRATION FORM</h2>
+    
+        <form [formGroup]="registration" (ngSubmit)="submit()">
+            <mat-form-field appearance="outline"  class ="name">
+            <mat-label >Email Id</mat-label> 
+            <input matInput type="userEmail"  formControlName="userEmail" >
+            <mat-error *ngIf="userName.hasError('required')">Email should not be empty</mat-error>
+            <mat-error *ngIf="userEmail.hasError('pattern')&& userEmail?.dirty">Invalid Email</mat-error>
+            </mat-form-field>&nbsp;
+            <br>
+            
+            <mat-form-field appearance="outline" class ="name">
+                <mat-label>UserName</mat-label>
+                <input matInput type="userName" formControlName="userName">
+                <!-- <mat-hint *ngIf="!userName?.valid"> User Name is required</mat-hint> -->
+                <mat-error *ngIf="userName.hasError('required')">Name should not be empty</mat-error>
+                <mat-error *ngIf="userName.hasError('pattern')">Name should contain only albhabets</mat-error>
+                
+                </mat-form-field>
+<br>
+
+            <mat-form-field appearance="outline" class = "pass" >
+                <mat-label>Password</mat-label> 
+                <input  matInput type="password" formControlName="password">
+                <mat-error *ngIf="userName.hasError('required')"> Password is must</mat-error>
+                <!-- <mat-hint *ngIf="!password?.valid&& password?.dirty">min length should be 9</mat-hint> -->
+                <mat-error *ngIf="password.hasError('pattern')">Password is too short</mat-error>
+                <!-- <br> <mat-hint *ngIf="!password?.valid&& password?.dirty">Invalid password</mat-hint> -->
+                </mat-form-field>&nbsp;
+                
+            <mat-form-field appearance="outline" class = "pass">
+               <mat-label> Confirm Password</mat-label> 
+                <input  matInput type="password" formControlName="cpassword">
+                <mat-error *ngIf="!cpassword?.valid&& cpassword?.dirty">Passwords not matched</mat-error>
+                </mat-form-field><br>
+             
+            <mat-form-field appearance="outline"   class ="name">
+               <mat-label>Phone Number</mat-label> 
+                <input matInput formControlName="mobileNo">
+                <mat-error *ngIf="userName.hasError('required')">PhoneNo should not be empty</mat-error>
+                <mat-error *ngIf="mobileNo.hasError('pattern') && mobileNo?.dirty">Invalid phoneNumber</mat-error>
+                </mat-form-field><br>
+                <div class = "reg">
+            <button  mat-raised-button style="margin-left: -40px;" type="submit" value="REGISTER"  mat-dailog-close [disabled]="registration.invalid || !(registration.value.password==registration.value.cpassword)">REGISTER</button><br>
+          </div>
+            <!-- <div class = "span"> -->
+            <span style="color:rgba(224, 17, 17, 0.918); margin-left: 10px; margin-top: 18px;" >I Already Have Account ? <a routerLink="/signin">SignIn</a></span>
+        <!-- </div> -->
+        </form>
+       
+</div> 
+  </body>
+
+<!-- (click)="submit()" -->

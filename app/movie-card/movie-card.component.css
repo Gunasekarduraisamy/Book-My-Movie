@@ -1,0 +1,122 @@
+  
+ 
+body {
+  width: 100%;
+}
+ 
+   .movie-card {
+    width: 300px;
+    margin-top: 55px;
+   
+    margin-left: 100px;
+    /* background-color: #e7c9c9;  */
+    background-color: rgb(8, 8, 8);
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px 1px red;
+    overflow: hidden;
+  }
+  
+  .movie-card img {
+    
+    margin-top: 10px;
+    width: 270px;
+    margin-left: 15px;
+   
+    object-fit: cover;
+    
+  height: 250px;
+ 
+  color: #fff;
+  border-radius: 20px;
+  /* box-shadow: 0 0 5px #f403a4c5,
+              0 0 15px #f403a4,
+              0 0 50px #f403a486; */
+              box-shadow: 0 0 5px #f40303c5,
+              0 0 15px #f40303c5,
+              0 0 50px #f40303c5;
+  }
+  
+  .movie-card .mat-card-header {
+    padding: 10px;
+    text-align: center; 
+    background-color: #eee5e5;
+  }
+  
+  .movie-card .movie-title {
+    font-size: 18px;
+    font-weight: bold; 
+    color: #d11616; 
+  }
+  
+  .movie-card .mat-card-subtitle {
+    font-size: 14px;
+    color: #eee5e5; 
+  }
+  
+  .movie-card .mat-card-actions {
+    display: flex;
+    justify-content: center; 
+    padding: 10px;
+    color: #eee5e5;
+  }
+  
+  .movie-card .mat-chip {
+    margin: 5px;
+  }
+  
+  .movie-card:hover {
+    cursor: pointer;
+    
+  }
+  
+
+  .btn-secondary {
+  
+  
+    background: #e6073b69;
+    border-radius: 33px;
+ 
+    font-size: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #f30505;
+    text-decoration: none;
+    padding-left: 20px;
+    border: 2px solid rgb(212, 11, 11);
+    
+  }
+  .btn-secondary:hover {
+    transform: translateY(5px);
+  }
+
+
+
+  button{
+    display: table-cell;
+    width: 112px;
+    height: 35px;
+    background-color: rgb(226, 115, 167);
+    margin-left: 20px;
+    font-weight: bold;
+    
+    color: #f30505;
+    border-radius: 10px;
+    border: 2px solid rgb(212, 11, 11);
+}
+
+    
+
+
+
+/* 
+#image{
+  width: 240px;
+  height: 200px;
+  background: #f403a4;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 5px #f403a4c5,
+              0 0 15px #f403a4,
+              0 0 50px #f403a486;
+} */

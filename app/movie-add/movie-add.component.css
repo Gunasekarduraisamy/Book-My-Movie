@@ -1,0 +1,51 @@
+#add-movie {
+    display: flex;
+    padding: 50px;
+    margin-left: 500px;
+    flex-direction: column;
+    text-align: center;
+  
+}
+
+
+.body{
+    background-image: url("../../assets/images/super.jpg");
+    background-size: cover;
+ 
+}
+#header {
+    display: flex;
+    height:80px;
+    background-color: aliceblue;
+    justify-content: space-between;
+    width: 100%;
+  }
+h2{
+    color: red;
+    font-weight: bolder;
+    font-size: 30px;
+    font-style: italic;
+  }
+
+#header > nav > mat-icon {
+    cursor: pointer;
+    padding: 20px;
+   
+}
+button:hover {
+    background-color: aqua; /* Change the background color on hover */
+  }
+
+.head{
+   
+    font-family: italic;
+    padding-right: 1040px;
+    color: rgb(252, 243, 243);
+    font-family: italic;
+  
+  }
+  
+
+mat-hint{
+    color: red;
+}

@@ -1,0 +1,47 @@
+
+   
+
+
+
+   
+ 
+  <section>
+<div class = "search">
+    <app-search id="search" (searchEvent)="onSearch($event)"></app-search>
+  </div>
+   <div class = "btn">
+      <button mat-stroked-button  (click)="onfilter()">All Movies</button>
+      <button mat-stroked-button  (click)="items(Tamil)">Tamil</button>
+      <button mat-stroked-button  (click)="items(Telugu)">Telugu</button>
+      <button mat-stroked-button  (click)="items(English)">English</button>
+  </div>
+    
+    
+    <div class = "drop">
+    <mat-form-field  >
+        <mat-label id = "city" style="height: 10px;">Choose-City</mat-label>
+      <mat-select class = "all" >
+        <mat-option value="Hyderabad" (click)="item(Hyderabad)">Hyderabad</mat-option>
+        <mat-option value="Tamil Nadu"(click)="item(Chennai)">Chennai</mat-option>
+       
+      </mat-select>
+    </mat-form-field>
+  </div>
+</section>
+  <div class="favt">
+    <div id="mySidenav" class="sidenav">
+      <a id="fav" *ngIf = "isLoggedIn" (click)="callFavComp()">Favourite Movies</a>
+    </div> 
+     </div>
+
+   
+
+ <div>
+    <app-movie-card class="card" *ngFor = "let movie of Movies" [movie]="movie" >
+    </app-movie-card>
+ </div>
+
+
+
+   
+ 

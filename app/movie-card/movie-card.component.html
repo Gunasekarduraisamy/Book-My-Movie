@@ -1,0 +1,16 @@
+<body>
+<mat-card class="movie-card">
+    <img mat-card-image id="image" src="../../assets/images/{{movie?.movieName}}.jpg">
+    <mat-card-header>
+        <mat-card-title style="color:white;" class="movie-title">{{movie?.movieName}}</mat-card-title> 
+        <mat-card-subtitle style="color:white;">Language: {{movie?.movieLanguage}} | Theater: {{movie?.theaterName}} | TheaterCity: {{movie?.theaterCity}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-actions>
+        <button mat-button  *ngIf="isLoggedIn" routerLink="/movie-card/{{movie?.movieId}}"  matTooltip="Book The Movie">BookNow</button>
+        <button mat-button class="btn-secondary"  *ngIf="isLoggedIn"   (click)="searchMovieBasedOnId(movie?.movieId)" matTooltip="Add Favourite"><mat-icon>favorite</mat-icon></button>
+    </mat-card-actions>
+ </mat-card>
+ </body>
+
+
+  

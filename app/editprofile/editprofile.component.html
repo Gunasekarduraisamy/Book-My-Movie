@@ -1,0 +1,20 @@
+<div >
+    <h2>Edit details</h2><hr><br>
+    <h3>
+        <form [formGroup]="registration" action="">
+            <h2 >UserName : {{user.userName}}</h2>
+          
+                <mat-form-field appearance="fill" style=" width: 415px; margin-left: 1px;">
+                    <mat-label>UserName</mat-label>
+                    <input matInput type="userName" formControlName="userName">
+                    <mat-hint *ngIf="!userName?.valid&& userName?.dirty">Invalid userName</mat-hint>
+                    </mat-form-field><br>
+            <mat-form-field appearance="fill" style=" width: 415px; margin-left: 1px;">
+                <mat-label>Phone Number</mat-label>
+                <input matInput formControlName="mobileNo">
+                <mat-hint *ngIf="!mobileNo?.valid&& mobileNo?.dirty">Invalid phoneNumber</mat-hint>
+                </mat-form-field><br><br>
+            <button  mat-raised-button style="margin-left: 10px;" type="submit" color="warn"value="REGISTER"  (click)="update()" mat-dailog-close [disabled]="registration.invalid">UPDATE</button><br>
+        </form>
+    </h3>
+</div>

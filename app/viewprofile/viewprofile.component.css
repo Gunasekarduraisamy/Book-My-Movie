@@ -1,0 +1,46 @@
+mat-label{
+    color: rebeccapurple;
+  }
+   
+  .signIn{
+    color: rebeccapurple;
+  } 
+  
+  h3{
+    padding-top: 10px;
+    font-size: 20px;
+    font-family: serif;
+    font: bolder;
+    color: #fff;
+  
+  }
+
+  h2{
+    color: cornsilk;
+  }
+  
+  .sub{
+    justify-content: space-around;
+    border-radius: 20px;
+    
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background-color: rgba(181, 195, 199, 0.413);
+  }
+  .sub:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #03e8f4dc,
+                0 0 25px #03e8f469,
+                0 0 50px #03e8f491,
+                0 0 100px #03e8f48c;
+  }
+
+  .body{
+    width: 500px;
+    text-align: center;
+    background-color: grey;
+    
+  }

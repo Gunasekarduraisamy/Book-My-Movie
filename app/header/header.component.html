@@ -1,0 +1,34 @@
+<mat-toolbar class = "color">
+   
+   
+   <!-- <img src="../../assets/images/logo4.jpg" alt="Description of the image" height="38px" width="50px"> -->
+   
+  
+ 
+   <img src="../../assets/images/Screenshot 2024-01-25 080707.png" style="width: 200px;height: 50px;"> 
+
+   
+  
+    <span class="example-spacer"></span>
+    <button mat-raised-button *ngIf="!isLoggedIn" routerActive="Active"  routerLink="/signin" matTooltip="signin">
+      
+      <mat-icon >login</mat-icon>
+    </button>
+      <hr>
+      <hr>
+      <hr>
+
+    <button mat-raised-button class="signup"  *ngIf="!isLoggedIn" routerlink="openDialog1" routerActive="Active"  routerLink="/signup" aria-label="Example icon-button with heart icon"  matTooltip="signup">
+      <mat-icon>how_to_reg</mat-icon>
+     
+    </button>
+    
+    
+    <button mat-button [matMenuTriggerFor]="signOut1" *ngIf="isLoggedIn" style="color:red;font-size: large;font-weight: bolder;font-family: serif; "><mat-icon> person_pin</mat-icon> WELCOME {{name}}</button>
+    <mat-menu #signOut1="matMenu">
+    <button mat-menu-item (click)="signOut()">Log Out</button> 
+    <button mat-menu-item (click)="viewProfile()">View Profile</button> 
+    <button mat-menu-item (click)="editProfile()">Edit Profile</button>
+    </mat-menu>
+     
+  </mat-toolbar>

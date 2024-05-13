@@ -1,0 +1,71 @@
+
+
+
+<div class="body">
+<mat-toolbar color="primary" id="header">
+ 
+  <img src="../../assets/images/Screenshot 2024-01-25 080707.png" style="width: 200px;height: 50px;">
+
+  <nav>
+      <button mat-raised-button  matTooltip="Home" routerLink="/">
+        <mat-icon >home</mat-icon>
+      </button>
+  </nav>
+
+
+
+</mat-toolbar>
+  <div id="add-movie">
+    
+    <h2>ADD MOVIES</h2><hr><br>
+    
+    <h3>
+      <form [formGroup]="registration" action="">
+        <mat-form-field appearance="fill">
+          <mat-label>Movie-Id</mat-label>
+          <input matInput type="text" formControlName="movieId" >
+          <mat-hint *ngIf="!movieId?.valid&& movieId?.dirty">Invalid movieId</mat-hint>
+          </mat-form-field><br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>image</mat-label>
+            <input matInput type="text" formControlName="image" >
+            <mat-hint *ngIf="!image?.valid&& image?.dirty">Invalid image</mat-hint>
+            </mat-form-field><br>
+
+          <mat-form-field appearance="fill">
+            <mat-label>MovieName</mat-label>
+            <input matInput type="text" formControlName="movieName" >
+            <mat-hint *ngIf="!movieName?.valid&& movieName?.dirty">Invalid movieName</mat-hint>
+            </mat-form-field>&nbsp;
+            <br>
+
+            <mat-form-field appearance="fill">
+              <mat-label>movieLanguage</mat-label>
+              <input matInput type="text" formControlName="movieLanguage">
+              <mat-hint *ngIf="!movieLanguage?.valid&& movieLanguage?.dirty">Invalid movieLanguage</mat-hint>
+              </mat-form-field><br>
+
+              <mat-form-field appearance="fill">
+                <mat-label>TheaterId</mat-label>
+                <input matInput type="text" formControlName="theaterId">
+                <mat-hint *ngIf="!theaterId?.valid&& theaterId?.dirty">Invalid theaterId</mat-hint>
+                </mat-form-field><br>
+
+                <mat-form-field appearance="fill">
+                  <mat-label>TheaterName</mat-label>
+                  <input matInput type="text" formControlName="theaterName">
+                  <mat-hint *ngIf="!theaterName?.valid&& theaterName?.dirty">Invalid theaterName</mat-hint>
+                  </mat-form-field>&nbsp;<br>
+
+                  <mat-form-field appearance="fill">
+                    <mat-label>TheaterCity</mat-label>
+                    <input matInput type="text" formControlName="theaterCity">
+                    <mat-hint *ngIf="!theaterCity?.valid&& theaterCity?.dirty">Invalid theaterCity</mat-hint>
+                    </mat-form-field><br><br>
+                    <button mat-raised-button color="primary" type="submit" [disabled]="registration.invalid" (click)="submit()">Add Movie</button>
+      </form>
+    </h3>
+  </div>
+</div>
+  
