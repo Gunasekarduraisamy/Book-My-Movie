@@ -1,0 +1,10 @@
+com\example\userAuthentication\exception\UserAlreadyExistsException.class
+com\example\userAuthentication\security\JWTSecurityTokenGeneratorImpl.class
+com\example\userAuthentication\exception\InvalidCredentialsException.class
+com\example\userAuthentication\services\IUserService.class
+com\example\userAuthentication\controller\UserController.class
+com\example\userAuthentication\security\SecurityTokenGenerator.class
+com\example\userAuthentication\services\UserServiceImpl.class
+com\example\userAuthentication\domain\UserData.class
+com\example\userAuthentication\repository\UserRepository.class
+com\example\userAuthentication\UserAuthenticationApplication.class

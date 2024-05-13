@@ -1,0 +1,4 @@
+com\example\userAuthentication\UserAuthenticationApplicationTests.class
+com\example\userAuthentication\repository\UserRepositoryTest.class
+com\example\userAuthentication\services\UserServicesImplTest.class
+com\example\userAuthentication\controller\UserControllerTest.class
